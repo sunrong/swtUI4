@@ -166,7 +166,7 @@ public class DownFile extends Dialog {
 		// 检查本地文件
 		RandomAccessFile rndFile = null;
 		File file = new File(filePath + "//" + fileName);
-		long remoteFileSize = getRemoteFileSzie(remoteUrl);
+		long remoteFileSize = getRemoteFileSize(remoteUrl);
 		long nPos = 0;
 
 		// System.out.println("remote size" + remoteFileSize + "--" + (int)
@@ -285,7 +285,7 @@ public class DownFile extends Dialog {
 	 * Create contents of the dialog.
 	 */
 
-	public static long getRemoteFileSzie(String url) {
+	public static long getRemoteFileSize(String url) {
 		long size = 0;
 		try {
 			HttpURLConnection httpUrl = (HttpURLConnection) (new URL(url)).openConnection();

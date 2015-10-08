@@ -7,7 +7,7 @@ public class HttpUtils {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(getHtml("http://localhost:8080/download/version.html") > 2.0);
+		System.out.println(getHtml("http://localhost:8008/download/version.html") > 2.0);
 	}
 
 	public static Double getHtml(String urlString) {

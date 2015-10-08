@@ -3,6 +3,12 @@
   <groupId>com.dw.swt</groupId>
   <artifactId>swtUI4J</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  
+  <properties>
+  	<maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
+  </properties>
+  
   <dependencies>
 		<dependency>
 			<groupId>org.eclipse.core</groupId>

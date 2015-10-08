@@ -28,14 +28,14 @@ import eclipse.wb.swt.SWTResourceManager;
 
 public class LayoutUtils {
 
-	// å…¨å±€é¢œè‰²æ§åˆ¶å™¨
+	// È«¾ÖÑÕÉ«¿ØÖÆÆ÷
 
 	static List<Composite> compList = new ArrayList<Composite>();
 	private static int headHeight;
 	private static int footHeight;
 	private static int rgbRed;
-	private static Color backColortarget = null;// å˜è‰²æ¢è‚¤äº§ç”Ÿçš„å€¼
-	private static RGB backColorRGB = null;// å˜è‰²æ¢è‚¤äº§ç”Ÿçš„å€¼
+	private static Color backColortarget = null;// ±äÉ«»»·ô²úÉúµÄÖµ
+	private static RGB backColorRGB = null;// ±äÉ«»»·ô²úÉúµÄÖµ
 	private static int rgbGree;
 	private static int rgbBlue;
 	static {
@@ -141,7 +141,7 @@ public class LayoutUtils {
 			}
 		});
 		btMin.setAlignment(SWT.CENTER);
-		btMin.setText(" ä¸€");
+		btMin.setText(" Ò»");
 		btMin.setBackground(backColortarget);
 		btMin.setForeground(SWTResourceManager.getColor(SWT.COLOR_BLACK));
 		FormData fd_button_1 = new FormData();
@@ -160,7 +160,7 @@ public class LayoutUtils {
 			}
 		});
 		btColor.setAlignment(SWT.CENTER);
-		btColor.setText("â˜");
+		btColor.setText("?");
 		btColor.setBackground(backColortarget);
 		btColor.setForeground(SWTResourceManager.getColor(SWT.COLOR_BLACK));
 		FormData fd_button_2 = new FormData();
@@ -321,7 +321,7 @@ public class LayoutUtils {
 			}
 		});
 		btMin.setAlignment(SWT.CENTER);
-		btMin.setText(" ä¸€");
+		btMin.setText(" Ò»");
 		btMin.setBackground(backColortarget);
 		btMin.setForeground(SWTResourceManager.getColor(SWT.COLOR_BLACK));
 		FormData fd_button_1 = new FormData();
@@ -340,7 +340,7 @@ public class LayoutUtils {
 			}
 		});
 		btColor.setAlignment(SWT.CENTER);
-		btColor.setText("â˜");
+		btColor.setText("?");
 		btColor.setBackground(backColortarget);
 		btColor.setForeground(SWTResourceManager.getColor(SWT.COLOR_BLACK));
 		FormData fd_button_2 = new FormData();
