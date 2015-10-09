@@ -5,6 +5,9 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.lang.invoke.MethodHandles;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -288,16 +291,10 @@ public class PropertiesUtil {
 
 	public static Properties loadPropertyInstance(String filePath, String fileName) {
 		try {
-			File d = new File(filePath);
-			if (!d.exists()) {
-				d.mkdirs();
-			}
-			File f = new File(d, fileName);
-			if (!f.exists()) {
-				f.createNewFile();
-			}
+			Path pathFrom = Paths.get(filePath, fileName);System.out.println(pathFrom.toString());
 			Properties p = new Properties();
-			InputStream is = new FileInputStream(f);
+			ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+			InputStream is = classloader.getResourceAsStream(pathFrom.toString());	
 			p.load(is);
 			is.close();
 			return p;

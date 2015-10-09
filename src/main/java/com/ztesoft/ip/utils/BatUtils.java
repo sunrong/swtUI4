@@ -16,7 +16,7 @@ public class BatUtils {
 		String c2 = " netsh interface ip add dns \"" + namestr + "\" " + dns1str + " index=1 >nul ";
 		String c3 = " netsh interface ip add dns \"" + namestr + "\" " + dns2str + " index=2 >nul ";
 		try {
-			File f1 = new File("src/main/resources/resource/config/updateIp.bat");
+			File f1 = new File("resource/config/updateIp.bat");
 			if (f1.exists()) {
 				f1.delete();
 			}
@@ -52,7 +52,7 @@ public class BatUtils {
 		String c1 = " netsh interface ip set address name=\"" + namestr + "\"  source=dhcp >nul ";
 		String c2 = " netsh interface ip set dns \"" + namestr + "\"   source=dhcp >nul ";
 		try {
-			File f1 = new File("src/main/resources/resource/config/updateIp.bat");
+			File f1 = new File("resource/config/updateIp.bat");
 			if (f1.exists()) {
 				f1.delete();
 			}
