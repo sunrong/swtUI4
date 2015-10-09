@@ -27,6 +27,7 @@ import com.ztesoft.ip.utils.DialogUtil;
 import com.ztesoft.ip.utils.HttpUtils;
 import com.ztesoft.ip.utils.LayoutUtils;
 import com.ztesoft.ip.utils.PropertiesUtil;
+
 import org.eclipse.swt.layout.FormLayout;
 import org.eclipse.swt.layout.FormData;
 import org.eclipse.swt.layout.FormAttachment;
@@ -46,7 +47,7 @@ public class DownFile extends Dialog {
 	private Button begin;
 	private Button cacel;
 	static {
-		PropertiesUtil.load("resouce/config", "value.config");
+		PropertiesUtil.load("src/main/resources/resource/config", "value.config");
 
 		downurl = PropertiesUtil.getProperty("updateUrl");
 		fileName = PropertiesUtil.getProperty("downloadFilename");

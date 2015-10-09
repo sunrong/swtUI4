@@ -28,18 +28,18 @@ import eclipse.wb.swt.SWTResourceManager;
 
 public class LayoutUtils {
 
-	// È«¾ÖÑÕÉ«¿ØÖÆÆ÷
+	// å…¨å±€é¢œè‰²æ§åˆ¶å™¨
 
 	static List<Composite> compList = new ArrayList<Composite>();
 	private static int headHeight;
 	private static int footHeight;
 	private static int rgbRed;
-	private static Color backColortarget = null;// ±äÉ«»»·ô²úÉúµÄÖµ
-	private static RGB backColorRGB = null;// ±äÉ«»»·ô²úÉúµÄÖµ
+	private static Color backColortarget = null;// å˜è‰²æ¢è‚¤äº§ç”Ÿçš„å€¼
+	private static RGB backColorRGB = null;// å˜è‰²æ¢è‚¤äº§ç”Ÿçš„å€¼
 	private static int rgbGree;
 	private static int rgbBlue;
 	static {
-		PropertiesUtil.load("resouce/config", "value.config");
+		PropertiesUtil.load("src/main/resources/resource/config", "value.config");
 
 		headHeight = PropertiesUtil.getInt("headHeight", 25);
 		footHeight = PropertiesUtil.getInt("footHeight", 25);
@@ -141,7 +141,7 @@ public class LayoutUtils {
 			}
 		});
 		btMin.setAlignment(SWT.CENTER);
-		btMin.setText(" Ò»");
+		btMin.setText(" ä¸€");
 		btMin.setBackground(backColortarget);
 		btMin.setForeground(SWTResourceManager.getColor(SWT.COLOR_BLACK));
 		FormData fd_button_1 = new FormData();
@@ -321,7 +321,7 @@ public class LayoutUtils {
 			}
 		});
 		btMin.setAlignment(SWT.CENTER);
-		btMin.setText(" Ò»");
+		btMin.setText(" ä¸€");
 		btMin.setBackground(backColortarget);
 		btMin.setForeground(SWTResourceManager.getColor(SWT.COLOR_BLACK));
 		FormData fd_button_1 = new FormData();

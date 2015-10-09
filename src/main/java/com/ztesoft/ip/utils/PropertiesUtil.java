@@ -13,8 +13,6 @@ import java.util.Properties;
 
 import jodd.util.StringUtil;
 
-import com.sun.xml.internal.ws.util.StringUtils;
-
 /**
  * java.util.Properties工具类 1、封装了对属性文件的简单读写 2、拓展加入了对List、Map数据格式的支持
  * 

@@ -25,6 +25,7 @@ import org.eclipse.swt.widgets.Text;
 
 import com.ztesoft.ip.update.DownFile;
 import com.ztesoft.ip.utils.BatUtils;
+import com.ztesoft.ip.utils.DialogUtil;
 import com.ztesoft.ip.utils.IpAddress;
 import com.ztesoft.ip.utils.LayoutUtils;
 import com.ztesoft.ip.utils.PropertiesUtil;
@@ -59,7 +60,7 @@ public class MainApp {
 			shello.setSize(636, 435);
 			shello.setLayout(new FormLayout());
 			{
-				PropertiesUtil.load("resouce/config", "value.config");
+				PropertiesUtil.load("src/main/resources/resource/config", "value.config");
 
 				String version = PropertiesUtil.getProperty("version");
 
@@ -262,7 +263,7 @@ public class MainApp {
 	protected static void dosetauto() {
 		// TODO Auto-generated method stub
 		BatUtils.runAuto(namestr);
-		com.ztesoft.ip.utils.DialogUtil.openInfo(shello, "自动获取ip dns设置成功!");
+		DialogUtil.openInfo(shello, "自动获取ip dns设置成功!");
 	}
 
 	protected static void dosethand() {
@@ -274,13 +275,13 @@ public class MainApp {
 			return;
 		}
 		BatUtils.runHandSet(namestr, ipstr, ymstr, wgstr, dns1str, dns2str);
-		com.ztesoft.ip.utils.DialogUtil.openInfo(shello, "手动获取ip dns设置成功,您现在ip：" + ipstr);
+		DialogUtil.openInfo(shello, "手动获取ip dns设置成功,您现在ip：" + ipstr);
 	}
 
 	private static void initDate() {
 		// TODO Auto-generated method stub
 
-		PropertiesUtil.load("resouce/config", "value.config");
+		PropertiesUtil.load("src/main/resources/resource/config", "value.config");
 
 		namestr = PropertiesUtil.getProperty("name");
 		// #1 无线网络连接 2 本地连接
