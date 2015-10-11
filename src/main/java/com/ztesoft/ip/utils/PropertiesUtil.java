@@ -291,10 +291,10 @@ public class PropertiesUtil {
 
 	public static Properties loadPropertyInstance(String filePath, String fileName) {
 		try {
-			Path pathFrom = Paths.get(filePath, fileName);System.out.println(pathFrom.toString());
+			String fileDir = filePath + "/" + fileName;
 			Properties p = new Properties();
-			ClassLoader classloader = Thread.currentThread().getContextClassLoader();
-			InputStream is = classloader.getResourceAsStream(pathFrom.toString());	
+			Class currentClass = new Object(){}.getClass().getEnclosingClass();			
+			InputStream is =  currentClass.getClass().getResourceAsStream(fileDir);	
 			p.load(is);
 			is.close();
 			return p;

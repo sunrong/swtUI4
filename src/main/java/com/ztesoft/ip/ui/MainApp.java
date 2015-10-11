@@ -60,7 +60,7 @@ public class MainApp {
 			shello.setSize(636, 435);
 			shello.setLayout(new FormLayout());
 			{
-				PropertiesUtil.load("resource/config", "value.config");
+				PropertiesUtil.load("/resource/config", "value.config");
 
 				String version = PropertiesUtil.getProperty("version");
 
@@ -281,12 +281,12 @@ public class MainApp {
 	private static void initDate() {
 		// TODO Auto-generated method stub
 
-		PropertiesUtil.load("resource/config", "value.config");
+		PropertiesUtil.load("/resource/config", "value.config");
 
 		namestr = PropertiesUtil.getProperty("name");
 		// #1 无线网络连接 2 本地连接
 		if (StringUtil.equals(namestr, "1")) {
-			namestr = "无线网络连接";
+			namestr = "Wireless Network Connection";
 		}
 		if (StringUtil.equals(namestr, "2")) {
 			namestr = "本地连接";

@@ -48,11 +48,11 @@ public class BatUtils {
 	}
 
 	public static void runAuto(String namestr) {
-		// TODO Auto-generated method stub
+		System.out.println(namestr);
 		String c1 = " netsh interface ip set address name=\"" + namestr + "\"  source=dhcp >nul ";
 		String c2 = " netsh interface ip set dns \"" + namestr + "\"   source=dhcp >nul ";
 		try {
-			File f1 = new File("resource/config/updateIp.bat");
+			File f1 = new File("updateIp.bat");
 			if (f1.exists()) {
 				f1.delete();
 			}

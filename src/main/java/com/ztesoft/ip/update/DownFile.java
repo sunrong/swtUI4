@@ -47,7 +47,7 @@ public class DownFile extends Dialog {
 	private Button begin;
 	private Button cacel;
 	static {
-		PropertiesUtil.load("resource/config", "value.config");
+		PropertiesUtil.load("/resource/config", "value.config");
 
 		downurl = PropertiesUtil.getProperty("updateUrl");
 		fileName = PropertiesUtil.getProperty("downloadFilename");

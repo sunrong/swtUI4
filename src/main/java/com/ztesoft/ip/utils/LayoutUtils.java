@@ -39,7 +39,7 @@ public class LayoutUtils {
 	private static int rgbGree;
 	private static int rgbBlue;
 	static {
-		PropertiesUtil.load("resource/config", "value.config");
+		PropertiesUtil.load("/resource/config", "value.config");
 
 		headHeight = PropertiesUtil.getInt("headHeight", 25);
 		footHeight = PropertiesUtil.getInt("footHeight", 25);
